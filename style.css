@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: bisque;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#fleur {
+    width: 40px;     
+    
+}
+
+.fleur {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 8px;
+    font-size: 14px;
+
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+li {
+    font-size: 15px;
+}
+
+header:has(ul li a:hover) #fleur {
+    animation: rotate-btn 2s linear infinite;
+}
+
+@keyframes rotate-btn {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 375px){
+    ul{
+        margin:0px;
+        margin-left: 70px;
+        gap: 9px;
+    }
+    
+    
+}
+
+@media screen and (min-width:425px) {
+    ul {
+        margin: 0px;
+        margin-left: 100px;
+    
+    }
+}
+@media screen and (min-width:768px) {
+    ul {
+        gap: 100px;
+       
+    }
+    .fleur{
+        font-size: 14px;
+    }
+
+}
